@@ -652,7 +652,7 @@ void loop() {
     int btn_state = M5.BtnA.wasHold() ? 1 : M5.BtnA.wasClicked() ? 2 : 0;
 
     if (btn_state != 0) {
-        // USBSerial.printf("BTN %s\r\n", btn_state_text[btn_state]);
+         //USBSerial.printf("BTN %s\r\n", btn_state_text[btn_state]);
     }
 
     if ((btn_state == 2) && !is_entry_func) {
