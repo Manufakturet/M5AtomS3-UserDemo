@@ -40,7 +40,7 @@ static char func_name_text[][16] = {
 
 const unsigned char* func_img_list[] = {
     wifi_scan_img, i2c_scan_img, uart_mon_img, io_pwm_img,
-    io_adc_img,    ir_send_img,  imu_test_img,
+    io_adc_img,    ir_send_img,  imu_test_img, 
 };
 
 I2C_MPU6886 imu(I2C_MPU6886_DEFAULT_ADDRESS, Wire1);
@@ -99,7 +99,7 @@ class func_wifi_t : public func_base_t {
         _canvas->setTextScroll(true);
         _canvas->clear(TFT_BLACK);
         _canvas->setFont(&fonts::efontCN_16);
-        _canvas->drawCenterString("Scaning...", _canvas->width() / 2,
+        _canvas->drawCenterString("Scanning...", _canvas->width() / 2,
                                   _canvas->height() / 2 - 12);
         _canvas->setFont(&fonts::efontCN_12);
         needDraw();
@@ -162,7 +162,7 @@ class func_i2c_t : public func_base_t {
         _canvas->setTextScroll(true);
         _canvas->clear(TFT_BLACK);
         _canvas->setFont(&fonts::efontCN_16);
-        _canvas->drawCenterString("Scaning...", _canvas->width() / 2,
+        _canvas->drawCenterString("Scanning...", _canvas->width() / 2,
                                   _canvas->height() / 2 - 12);
         needDraw();
         _btn_clicked = false;
